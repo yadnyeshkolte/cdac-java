@@ -3,7 +3,7 @@ package Hello.assingment1;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class AssignmentSolution {
+public class Assignment1Solution {
     public static void main(String[] args){
         System.out.println("Welcome: Want to try out solution ?");
         System.out.println("Want to know what is inside each 1 to 10 case");
