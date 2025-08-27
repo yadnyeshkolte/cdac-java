@@ -1,5 +1,7 @@
 package Hello.assingment1;
+
 //consider changing the package if its not working
+
 import java.util.Arrays;
 import java.util.Scanner;
 
