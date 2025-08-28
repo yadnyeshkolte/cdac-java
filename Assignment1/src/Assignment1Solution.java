@@ -1,4 +1,4 @@
-package Hello.assingment1;
+package Hello.Assignment1.src;
 
 //consider changing the package if its not working
 

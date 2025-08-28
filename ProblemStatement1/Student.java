@@ -1,4 +1,4 @@
-package Hello.problemstatement1;
+package Hello.ProblemStatement1;
 import java.util.Scanner;
 
 public class Student {
