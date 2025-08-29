@@ -1,7 +1,7 @@
 package Hello.Assingment2.src;
 
 class InCartItem {
-    public static void main(){
-        System.out.println("cart one");
+    static void main(){
+        System.out.print("It is not build yet");
     }
 }
