@@ -14,6 +14,7 @@ public class Main {
 
             String inputString = input.next().toLowerCase();
             if(inputString.equals("exit")){
+                System.out.println("Bye!");
                 break;
             }
             switch(inputString){
