@@ -1,42 +1,16 @@
-# \## Exercise List
+# Assignment 3- Simple Inheritance Problem Statements
 
-# 
+## 1. Bank Account System
+Create a superclass **BankAccount** with attributes accountNumber and balance, and a method deposit(double amount) to add money. Derive a subclass **SavingsAccount** with an exclusive attribute interestRate and an exclusive method calculateInterest() to compute interest. Write a program to create an object of SavingsAccount, use deposit() from the superclass, and calculateInterest() from the subclass.
 
-# ·  \*\*Factorial of a Number\*\* Create a user-defined method `findFactorial(int n)` that returns the factorial of a number using loops.
+## 2. Vehicle System
+Create a superclass **Vehicle** with attributes brand and fuel, and a method refuel(int liters) that adds fuel to the vehicle. Derive a subclass **Car** with an exclusive attribute mileage (km per liter) and an exclusive method calculateTravelDistance() that calculates how far the car can travel based on available fuel (fuel × mileage). Write a program to create a Car object, call refuel() from the superclass, and calculateTravelDistance() from the subclass.
 
-# 
+## 3. Employee Management
+Create a superclass **Employee** with attributes name and salary, and a method displayDetails(). Derive a subclass **Manager** with an exclusive attribute teamSize and an exclusive method calculateBonus() that gives a bonus based on team size. Write a program to create a Manager object, call displayDetails() from the superclass, and calculateBonus() from the subclass.
 
-# ·  \*\*Number Classification (Positive, Negative, Zero)\*\* Write a program with a user-defined method `classifyNumber(int number)` that determines whether a number is \*\*positive, negative, or zero\*\* using \*\*if–else if\*\* statements.
+## 4. Student Grading System
+Create a superclass **Student** with attributes name and marks, and a method showDetails(). Derive a subclass **GraduateStudent** with an exclusive attribute specialization and an exclusive method checkPass() that checks if marks ≥ 50. Write a program to create a GraduateStudent object, call showDetails() from the superclass, and checkPass() from the subclass.
 
-# 
-
-# ·  \*\*Temperature Converter\*\* Write a program with methods `celsiusToFahrenheit(double c)` and `fahrenheitToCelsius(double f)` to convert temperatures.
-
-# 
-
-# ·  \*\*Student Grade Calculator\*\* Create a method `calculateGrade(int marks)` that returns the grade (`A`, `B`, `C`, `D`, or `F`) based on marks using conditionals.
-
-# 
-
-# ·  \*\*Reverse the Digits of a Number\*\* Write a program with a user-defined method `reverseDigits(int number)` that reverses a number using a \*\*while loop\*\*.
-
-# 
-
-# ·  \*\*Reverse a String\*\* Create a user-defined method `reverseString(String str)` that returns the reversed form of the input string.
-
-# 
-
-# ·  \*\*Simple Interest Calculator\*\* Write a program with a method `calculateSI(double p, double r, double t)` that calculates and returns the simple interest.
-
-# 
-
-# ·  \*\*Array Maximum Finder\*\* Write a program with a method `findMax(int\[] arr)` that returns the largest element in an array.
-
-# 
-
-# ·  \*\*Array Sorting\*\* Write a program with a user-defined method `sortArray(int\[] arr)` that sorts an array in ascending order (without using inbuilt sort).
-
-# 
-
-# ·  \*\*Remove Duplicate Elements from Array\*\* Write a program with a method `removeDuplicates(int\[] arr)` that removes duplicate elements from an array and returns the new array.
-
+## 5. Product Billing System
+Create a superclass **Product** with attributes productName and price, and a method showProduct(). Derive a subclass **DiscountedProduct** with an exclusive attribute discountRate and an exclusive method calculateFinalPrice() that reduces the price by discount percentage. Write a program to create a DiscountedProduct object, call showProduct() from the superclass, and calculateFinalPrice() from the subclass.
