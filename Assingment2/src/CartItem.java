@@ -16,13 +16,12 @@ public class CartItem {
     String getItemName(){
         return this.itemName;
     }
-    int getItemId(){
-        return this.itemId;
-    }
+
     int getPrice(){
         return this.price;
     }
     int getQuantity(){
         return this.quantity;
     }
+
 }
