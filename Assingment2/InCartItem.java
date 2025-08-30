@@ -1,4 +1,3 @@
-package Hello.Assingment2.src;
 
 import java.util.Scanner;
 
@@ -9,7 +8,8 @@ class InCartItem {
         ShoppingCart cart = new ShoppingCart();
         item = cart.intializeObjects();
         System.out.println("Welcome to Shopping Cart");
-        UserCart[] user = new UserCart[5];
+        int cartLength = 5;
+        UserCart[] user = new UserCart[cartLength];
         //UserCart is being initialized
         for(int i=0;i< user.length;i++){
             user[i] = new UserCart();
@@ -17,13 +17,13 @@ class InCartItem {
         int userCartIndex = 0;
         while(true){
             System.out.print("Want to try out some methods yes/no ");
-            String choice = scan.nextLine();
+            String choice = scan.next();
             if(choice.equals("no")){
                 break;
             }
-            System.out.println(" ");
-            System.out.print("'a' - add 'r' - remove 'd' - diplay products 'c' - cart 'di' discount available: ");
-            switch (scan.nextLine()){
+            System.out.print("'a' - add 'r' - remove 'd' - diplay products 'c' - cart 'pay' - Total Payment 'di' discount available: ");
+            String switchChoice = scan.next();
+            switch (switchChoice){
                 case "a": System.out.print("Enter the item id to add ");
                 //checkwhile
                 int newItemId = scan.nextInt();
@@ -46,11 +46,29 @@ class InCartItem {
                 if(userCartIndex >= 0){
                     int id = getCartItemId(user[newItemID-1].userItemName);
                     item[id-1].quantity++;
-                    user[userCartIndex].userItemId = 0;
-                    user[userCartIndex].userItemName =  "Empty";
-                    user[userCartIndex].userPrice =  0;
-                    user[userCartIndex].userQuantity = 0;
-                    userCartIndex++;
+                    user[newItemID-1].userItemId = 2147483647;
+                    user[newItemID-1].userItemName =  "Empty";
+                    user[newItemID-1].userPrice =  0;
+                    user[newItemID-1].userQuantity = 0;
+                    userCartIndex--;
+                    for(int i=0;i<user.length;i++) {
+                    	for(int j=i+1;j<user.length;j++) {
+                    		if(user[i].userItemId>user[j].userItemId) {
+                    			UserCart c = user[j];
+                    			user[j] = user[i];
+                    			user[i] = c;
+                    			
+                    		}
+                    	}
+                    }
+                    for(int i=0;i<user.length;i++) {
+                    	if(user[i].userItemId!=2147483647) {
+                    		user[i].userItemId = i;
+                    	}
+                    	else if(user[i].userItemId==2147483647) {
+                    		user[i].userItemId = 0;
+                    	}
+                    }
                 }
                 else{
                     System.out.println("You have remoed all the products, or the Id is not matching");
@@ -68,7 +86,28 @@ class InCartItem {
                     }
                 }
                 break;
-                case "di": System.out.println("Discount Available ");
+                case "di": System.out.print("Discount Available: ");
+                if(userCartIndex>=cartLength) {
+                	System.out.println("20% Discount");
+     
+                }
+                else {
+                	System.out.println("Fill the cart to get 20%");
+     
+                }
+                break;
+                case "pay": System.out.print("Pay out is ");
+            	float totalPayment = 0f;
+                if(userCartIndex>=cartLength) {
+                	for(int i=0;i<user.length;i++) {
+                		totalPayment+=user[i].userPrice * user[i].userQuantity;
+                	}
+                	System.out.println("Total Payment "+ (totalPayment - 0.2*totalPayment));
+                }
+                else {
+                	System.out.print("Fill the cart to get 20%");
+                	System.out.println(": Total Payment "+totalPayment);
+                }
                 break;
                 default:System.out.println("Invalid input");
             }

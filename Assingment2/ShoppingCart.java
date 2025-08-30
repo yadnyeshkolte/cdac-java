@@ -1,4 +1,3 @@
-package Hello.Assingment2.src;
 
 class ShoppingCart {
     //CertIteam[] temp;

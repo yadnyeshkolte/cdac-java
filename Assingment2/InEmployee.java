@@ -1,4 +1,4 @@
-package Hello.Assingment2.src;
+
 
 import java.util.Scanner;
 

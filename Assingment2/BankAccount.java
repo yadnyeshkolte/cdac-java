@@ -1,4 +1,4 @@
-package Hello.Assingment2.src;
+
 
 public class BankAccount {
     long accountNumber;
