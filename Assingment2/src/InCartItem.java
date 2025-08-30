@@ -50,7 +50,6 @@ class InCartItem {
                     user[userCartIndex].userItemName =  "Empty";
                     user[userCartIndex].userPrice =  0;
                     user[userCartIndex].userQuantity = 0;
-
                     userCartIndex++;
                 }
                 else{
