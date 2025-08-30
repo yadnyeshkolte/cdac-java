@@ -1,42 +1,12 @@
-# \## Exercise List
+# Java Basic Programming Problems
 
-# 
-
-# ·  \*\*Factorial of a Number\*\* Create a user-defined method `findFactorial(int n)` that returns the factorial of a number using loops.
-
-# 
-
-# ·  \*\*Number Classification (Positive, Negative, Zero)\*\* Write a program with a user-defined method `classifyNumber(int number)` that determines whether a number is \*\*positive, negative, or zero\*\* using \*\*if–else if\*\* statements.
-
-# 
-
-# ·  \*\*Temperature Converter\*\* Write a program with methods `celsiusToFahrenheit(double c)` and `fahrenheitToCelsius(double f)` to convert temperatures.
-
-# 
-
-# ·  \*\*Student Grade Calculator\*\* Create a method `calculateGrade(int marks)` that returns the grade (`A`, `B`, `C`, `D`, or `F`) based on marks using conditionals.
-
-# 
-
-# ·  \*\*Reverse the Digits of a Number\*\* Write a program with a user-defined method `reverseDigits(int number)` that reverses a number using a \*\*while loop\*\*.
-
-# 
-
-# ·  \*\*Reverse a String\*\* Create a user-defined method `reverseString(String str)` that returns the reversed form of the input string.
-
-# 
-
-# ·  \*\*Simple Interest Calculator\*\* Write a program with a method `calculateSI(double p, double r, double t)` that calculates and returns the simple interest.
-
-# 
-
-# ·  \*\*Array Maximum Finder\*\* Write a program with a method `findMax(int\[] arr)` that returns the largest element in an array.
-
-# 
-
-# ·  \*\*Array Sorting\*\* Write a program with a user-defined method `sortArray(int\[] arr)` that sorts an array in ascending order (without using inbuilt sort).
-
-# 
-
-# ·  \*\*Remove Duplicate Elements from Array\*\* Write a program with a method `removeDuplicates(int\[] arr)` that removes duplicate elements from an array and returns the new array.
-
+1. **Write a Java program** to take two integers as input and perform addition, subtraction, multiplication, and division.
+2. **Write a Java program** to check whether a given number is even or odd.
+3. **Write a Java program** to find the largest of three numbers entered by the user.
+4. **Write a Java program** to check whether a student has passed or failed based on marks entered (Pass if marks ≥ 50).
+5. **Write a Java program** to check whether a given year is a leap year or not.
+6. **Write a Java program** to check whether a number is positive, negative, or zero.
+7. **Write a Java program** to check whether a given character is a vowel, consonant, digit, or special character.
+8. **Write a Java program** to calculate simple interest based on principal, rate, and time entered by the user.
+9. **Write a Java program** to calculate and display the grade of a student based on percentage (A, B, C, D, Fail).
+10. **Write a Java program** to find the maximum of two numbers using the ternary operator.
