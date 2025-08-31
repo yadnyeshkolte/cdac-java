@@ -23,14 +23,10 @@ class SavingsAccount extends BankAccount{
 	float intrestRate;
 	
 	SavingsAccount(){
-		accountNumber = 0000000000;
-		balance = 0;
 		intrestRate = 0.07f;
 	}
 	
-	SavingsAccount(long accountNumber, double balance, float intrestRate){
-		this.accountNumber = 0000000000;
-		this.balance = 0;
+	SavingsAccount(long accountNumber){
 		this.intrestRate = 0.07f;
 	}
 	
