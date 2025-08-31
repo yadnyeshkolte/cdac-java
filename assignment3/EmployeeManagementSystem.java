@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class EmployeeManagementSystem {
 	static void main() {
 		Scanner scan = new Scanner(System.in);
-		System.out.println("Welcome to EMployee Management System ");
+		System.out.println("Welcome to Employee Management System ");
 		Manager person = new Manager();
 		while(true) {
 			System.out.print("Enter 'd' - display bonue 'c' calcuate bonus 'exit' - exit: ");
