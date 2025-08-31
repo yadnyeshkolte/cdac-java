@@ -1,4 +1,5 @@
 package assignment2;
+import java.util.Arrays;
 import java.util.Scanner;
 
 class InCartItem {
@@ -51,9 +52,17 @@ class InCartItem {
                     user[newItemID-1].userPrice =  0;
                     user[newItemID-1].userQuantity = 0;
                     userCartIndex--;
+                    
+                    for(int i=0;i<user.length;i++) {
+                    	if(user[i].userItemId==0) {
+                    		user[i].userItemId = 2147483647;
+                    	}
+                    	
+                    }
+                    //getUserArray(user);
                     for(int i=0;i<user.length;i++) {
                     	for(int j=i+1;j<user.length;j++) {
-                    		if(user[i].userItemId>user[j].userItemId) {
+                    		if(user[i].userItemId>=user[j].userItemId) {
                     			UserCart c = user[j];
                     			user[j] = user[i];
                     			user[i] = c;
@@ -61,14 +70,21 @@ class InCartItem {
                     		}
                     	}
                     }
+                    //getUserArray(user);
+                    int indexing = 1;
                     for(int i=0;i<user.length;i++) {
                     	if(user[i].userItemId!=2147483647) {
-                    		user[i].userItemId = i;
-                    	}
-                    	else if(user[i].userItemId==2147483647) {
-                    		user[i].userItemId = 0;
+                    		user[i].userItemId = indexing;
+                    		indexing++;
                     	}
                     }
+                    for(int i=0;i<user.length;i++) {
+                    	if(user[i].userItemId==2147483647) {
+                    		user[i].userItemId = 0;
+                    	}
+                    	
+                    }
+                    //getUserArray(user);
                 }
                 else{
                     System.out.println("You have remoed all the products, or the Id is not matching");
@@ -112,6 +128,11 @@ class InCartItem {
                 default:System.out.println("Invalid input");
             }
         }
+    }
+    static void getUserArray(UserCart[] user) {
+    	for(int i=0;i<user.length;i++) {
+    		System.out.println(user[i].userItemId+" "+user[i].userItemName+" "+user[i].userPrice+" "+user[i].userQuantity);
+    	}
     }
     static int getCartItemId(String name){
         CartItem[] getItemID;
