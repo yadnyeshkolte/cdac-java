@@ -1,5 +1,5 @@
 
-package test;
+package testing;
 public class Student {
 	int rollNo;
 	String name;

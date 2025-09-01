@@ -1,7 +1,7 @@
-package test;
+package testing;
 
-public class Test {
-	public static void main() {
+public class Main {
+	public static void main(String[] args) {
 		Student[] testDacs = new Student[6];
 		StoreStudents st = new StoreStudents();
 		

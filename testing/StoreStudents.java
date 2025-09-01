@@ -1,4 +1,4 @@
-package test;
+package testing;
 
 public class StoreStudents {
 	public Student[] intialise() {
