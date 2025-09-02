@@ -13,13 +13,13 @@ public class EducationMain {
 		teachers =  cdacTeachers.initializeTeacher();
 		
 		for(int i=0;i<students.length;i++) {
-			System.out.println(students[i].calculateGrade(students[i].marks));
+			System.out.println("Student "+students[i].name+" has grade "+students[i].calculateGrade(students[i].marks));
 		}
 		
 		System.out.println("=====================");
 		
 		for(int i=0;i<teachers.length;i++) {
-			System.out.println(teachers[i].calculateSalary(teachers[i].hoursWorked, 700));
+			System.out.println("Teacher "+teachers[i].name+" has salary "+teachers[i].calculateSalary(teachers[i].hoursWorked, 700));
 		}
 		
 	}

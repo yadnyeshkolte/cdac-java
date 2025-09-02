@@ -18,11 +18,10 @@ public class BankAccount {
 }
 
 class SavingsAccount extends BankAccount{
-	float rate;
+	static float rate = 0.07f;
 	SavingsAccount(){
-		rate = 0.0f;
 	}
-	SavingsAccount(long accountNumber, String holderName, int balance, float rate){
+	SavingsAccount(long accountNumber, String holderName, int balance){
 		super(accountNumber, holderName, balance);
 	}
 	float addInterest(float rate) {
@@ -33,15 +32,14 @@ class SavingsAccount extends BankAccount{
 }
 
 class CurrentAccount extends BankAccount{
-	double charge;
+	static double charge = 0.07f;
 	CurrentAccount(){
-		charge = 0.0f;
 	}
-	CurrentAccount(long accountNumber, String holderName, int balance, double charge){
+	CurrentAccount(long accountNumber, String holderName, int balance){
 		super(accountNumber, holderName, balance);
 	}
 	double applyServiceCharge(double charge) {
-		return balance+balance*charge;
+		return balance-balance*charge;
 		
 	}
 	
