@@ -2,7 +2,7 @@ package assignment3updated.vehicle;
 import java.util.Scanner;
 
 public class VehicleMain {
-	public static void main(String[] args) {
+	public static void main() {
 		Scanner scan = new Scanner(System.in);
 		
 		Bike[] cdacbike = new Bike[5];

@@ -1,4 +1,4 @@
-package assignment3.ecommerce;
+package assignment3updated.ecommerce;
 
 public class ElectronicsProduct {
 	Electronics[] getElectronics() {

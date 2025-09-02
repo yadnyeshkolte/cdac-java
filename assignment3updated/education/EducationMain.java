@@ -1,7 +1,7 @@
 package assignment3updated.education;
 
 public class EducationMain {
-	public static void main(String[] args) {
+	public static void main() {
 		
 		Student[] students = new Student[5];
 		Teacher[] teachers = new Teacher[5];

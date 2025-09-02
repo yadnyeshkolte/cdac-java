@@ -1,7 +1,7 @@
 package assignment3updated.banking;
 
 public class BankingMain {
-	public static void main(String[] args) {
+	public static void main() {
 		
 		CurrentAccount[] currentAccount = new CurrentAccount[5];
 		SavingsAccount[] savingsAccount = new SavingsAccount[5];

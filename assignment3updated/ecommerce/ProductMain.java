@@ -1,8 +1,8 @@
-package assignment3.ecommerce;
+package assignment3updated.ecommerce;
 import java.util.Scanner;
 
 public class ProductMain {
-	public static void main(String[] args) {
+	public static void main() {
 		
 		Scanner scan = new Scanner(System.in);
 		Electronics[] eProducts = new Electronics[5];
