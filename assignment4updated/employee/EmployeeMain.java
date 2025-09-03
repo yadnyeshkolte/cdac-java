@@ -3,7 +3,7 @@ package assignment4updated.employee;
 
 
 public class EmployeeMain {
-	public static void main(String[] args) {
+	public static void main(s) {
 		String name = "yadynesh";
 		float basicSalary = 90000.0f;
 		Employee e = new Employee(name,basicSalary);

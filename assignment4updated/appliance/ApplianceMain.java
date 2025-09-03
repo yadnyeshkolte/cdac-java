@@ -1,7 +1,7 @@
 package assignment4updated.appliance;
 
 public class ApplianceMain {
-	public static void main(String[] args) {
+	public static void main() {
 		Appliance a = new Appliance(); 
 		Fan f = new Fan();
 		AirConditioner ac = new AirConditioner();

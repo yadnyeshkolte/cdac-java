@@ -3,7 +3,7 @@ package assignment4.printing;
 import java.util.Scanner;
 
 public class PrinterMain {
-	public static void main(String[] args) {
+	public static void main() {
 		Scanner scan = new Scanner(System.in);
 		Printer p = new Printer();
 		String[] s = {"Apple","Microsoft","Amazon","Meta"};

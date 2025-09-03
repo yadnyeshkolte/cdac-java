@@ -1,7 +1,7 @@
 package assignment4updated.bankaccount;
 
 public class BankAccoutMain {
-	public static void main(String[] args) {
+	public static void main() {
 		long accountNumber = 8468465482l;
 		float balance = 900000.0f;
 		BankAccount b = new BankAccount(accountNumber,balance);
