@@ -335,7 +335,7 @@ b) Interfaces can have static methods.
 c) final methods can be overridden.  
 d) A class can implement multiple interfaces.
 
-## Q24. 
+## Q24. b
 ```java
 class A {
     void display() {
@@ -369,13 +369,13 @@ b) B
 c) C  
 d) Compilation error
 
-## Q25. Which keyword prevents a variable from being modified after initialization?
+## Q25. Which keyword prevents a variable from being modified after initialization? b
 a) const  
 b) final  
 c) static  
 d) private
 
-## Q26. 
+## Q26. b
 ```java
 class Test {
     final int x = 10;
@@ -391,13 +391,13 @@ b) Compilation error
 c) Runtime error  
 d) Prints 10
 
-## Q27. Which is true about constructors?
+## Q27. Which is true about constructors? b
 a) They can be inherited.  
 b) They cannot have return type.  
 c) They must be static.  
 d) They can be final.
 
-## Q28. 
+## Q28. c
 ```java
 class Test {
     private Test() {}
@@ -413,13 +413,13 @@ b) Runtime error
 c) Creates object successfully  
 d) Null pointer exception
 
-## Q29. Which of the following concepts allows multiple classes to have different implementations of the same method?
+## Q29. Which of the following concepts allows multiple classes to have different implementations of the same method? c
 a) Inheritance  
 b) Polymorphism  
 c) Encapsulation  
 d) Abstraction
 
-## Q30. 
+## Q30. c
 ```java
 abstract class Animal {
     abstract void sound();
