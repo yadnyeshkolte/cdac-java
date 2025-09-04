@@ -155,7 +155,7 @@ b) Method overriding
 c) Abstract classes  
 d) Interfaces
 
-## Q12. 
+## Q12. a
 ```java
 abstract class Shape {
     abstract void draw();
@@ -181,13 +181,13 @@ b) Drawing Shape
 c) Compilation error  
 d) Runtime error
 
-## Q13. What does the keyword this refer to in Java?
+## Q13. What does the keyword this refer to in Java? a
 a) The current object  
 b) The parent object  
 c) A static reference  
 d) None
 
-## Q14. 
+## Q14. b
 ```java
 class Test {
     int x;
@@ -213,13 +213,13 @@ b) 100
 c) Compilation error  
 d) Garbage value
 
-## Q15. Which statement is correct about final class?
+## Q15. Which statement is correct about final class? b
 a) It cannot be instantiated.  
 b) It cannot be inherited.  
 c) It cannot have methods.  
 d) It must be abstract.
 
-## Q16. 
+## Q16. b
 ```java
 final class Vehicle {}
 
@@ -236,13 +236,13 @@ b) Compilation error
 c) Runtime error  
 d) Nothing
 
-## Q17. Which keyword is used to call the parent class constructor?
+## Q17. Which keyword is used to call the parent class constructor? a
 a) super  
 b) this  
 c) parent  
 d) base
 
-## Q18. 
+## Q18. b
 ```java
 class A {
     A() {
@@ -270,13 +270,13 @@ b) A constructor B constructor
 c) Compilation error  
 d) Runtime error
 
-## Q19. Which access modifier allows access within the same package but not from outside?
+## Q19. Which access modifier allows access within the same package but not from outside? d
 a) public  
 b) private  
 c) protected  
 d) default
 
-## Q20. 
+## Q20. b
 ```java
 class Parent {
     protected int value = 100;
@@ -302,13 +302,13 @@ b) 100
 c) Compilation error  
 d) Runtime error
 
-## Q21. Which of the following cannot be declared as static?
+## Q21. Which of the following cannot be declared as static? c
 a) Variable  
 b) Method  
 c) Constructor  
 d) Nested class
 
-## Q22. 
+## Q22. b
 ```java
 class Test {
     static int count = 0;
