@@ -329,7 +329,7 @@ b) 2
 c) 0  
 d) Compilation error
 
-## Q23. Which statement is false?
+## Q23. Which statement is false? c
 a) Abstract classes can have constructors.  
 b) Interfaces can have static methods.  
 c) final methods can be overridden.  
