@@ -1,12 +1,12 @@
 # Java Objective Questions (Medium–Difficult)
 
-## Q1. Which of the following statements about Java classes and objects is true? b
+## Q1. Which of the following statements about Java classes and objects is true? 
 a) Every Java program must have at least one object.  
 b) A class can exist without creating any object.  
 c) An object can exist without a class.  
 d) All classes must be abstract.
 
-## Q2. a?
+## Q2. 
 ```java
 class Student {
     String name;
@@ -31,13 +31,13 @@ b) Compilation error
 c) Null 0  
 d) Runtime error
 
-## Q3. Which keyword in Java is used to call one constructor from another constructor in the same class? b
+## Q3. Which keyword in Java is used to call one constructor from another constructor in the same class? 
 a) super  
 b) this  
 c) new  
 d) final
 
-## Q4. a
+## Q4. 
 ```java
 class Demo {
     static int x = 10;
@@ -59,13 +59,13 @@ b) 10 20
 c) 50 100  
 d) 10 100
 
-## Q5. Which is true about static members? a
+## Q5. Which is true about static members? 
 a) Belong to the class, not objects.  
 b) Memory allocated separately for each object.  
 c) Cannot be accessed without creating an object.  
 d) Declared using final.
 
-## Q6. a
+## Q6. 
 ```java
 class Employee {
     int id;
@@ -86,13 +86,13 @@ b) 0
 c) Compilation error  
 d) Garbage value
 
-## Q7. Encapsulation in Java is mainly achieved using: a
+## Q7. Encapsulation in Java is mainly achieved using: 
 a) private variables + public methods  
 b) static variables  
 c) constructors  
 d) interfaces only
 
-## Q8. b
+## Q8. 
 ```java
 class A {
     private int data = 40;
@@ -115,13 +115,13 @@ b) Compilation error
 c) Runtime error  
 d) Hello
 
-## Q9. Which concept allows a subclass to acquire properties and methods of a superclass? c
+## Q9. Which concept allows a subclass to acquire properties and methods of a superclass? 
 a) Polymorphism  
 b) Abstraction  
 c) Inheritance  
 d) Encapsulation
 
-## Q10. b
+## Q10. 
 ```java
 class A {
     void show() {
@@ -149,13 +149,13 @@ b) Class B
 c) Compilation error  
 d) Runtime error
 
-## Q11. Which of the following supports compile-time polymorphism in Java? a
+## Q11. Which of the following supports compile-time polymorphism in Java? 
 a) Method overloading  
 b) Method overriding  
 c) Abstract classes  
 d) Interfaces
 
-## Q12. a
+## Q12. 
 ```java
 abstract class Shape {
     abstract void draw();
@@ -181,13 +181,13 @@ b) Drawing Shape
 c) Compilation error  
 d) Runtime error
 
-## Q13. What does the keyword this refer to in Java? a
+## Q13. What does the keyword this refer to in Java? 
 a) The current object  
 b) The parent object  
 c) A static reference  
 d) None
 
-## Q14. b
+## Q14. 
 ```java
 class Test {
     int x;
@@ -213,13 +213,13 @@ b) 100
 c) Compilation error  
 d) Garbage value
 
-## Q15. Which statement is correct about final class? b
+## Q15. Which statement is correct about final class? 
 a) It cannot be instantiated.  
 b) It cannot be inherited.  
 c) It cannot have methods.  
 d) It must be abstract.
 
-## Q16. b
+## Q16. 
 ```java
 final class Vehicle {}
 
@@ -236,13 +236,13 @@ b) Compilation error
 c) Runtime error  
 d) Nothing
 
-## Q17. Which keyword is used to call the parent class constructor? a
+## Q17. Which keyword is used to call the parent class constructor? 
 a) super  
 b) this  
 c) parent  
 d) base
 
-## Q18. b
+## Q18. 
 ```java
 class A {
     A() {
@@ -270,13 +270,13 @@ b) A constructor B constructor
 c) Compilation error  
 d) Runtime error
 
-## Q19. Which access modifier allows access within the same package but not from outside? d
+## Q19. Which access modifier allows access within the same package but not from outside? 
 a) public  
 b) private  
 c) protected  
 d) default
 
-## Q20. b
+## Q20. 
 ```java
 class Parent {
     protected int value = 100;
@@ -302,13 +302,13 @@ b) 100
 c) Compilation error  
 d) Runtime error
 
-## Q21. Which of the following cannot be declared as static? c
+## Q21. Which of the following cannot be declared as static? 
 a) Variable  
 b) Method  
 c) Constructor  
 d) Nested class
 
-## Q22. b
+## Q22. 
 ```java
 class Test {
     static int count = 0;
@@ -329,13 +329,13 @@ b) 2
 c) 0  
 d) Compilation error
 
-## Q23. Which statement is false? c
+## Q23. Which statement is false? 
 a) Abstract classes can have constructors.  
 b) Interfaces can have static methods.  
 c) final methods can be overridden.  
 d) A class can implement multiple interfaces.
 
-## Q24. b
+## Q24. 
 ```java
 class A {
     void display() {
@@ -369,13 +369,13 @@ b) B
 c) C  
 d) Compilation error
 
-## Q25. Which keyword prevents a variable from being modified after initialization? b
+## Q25. Which keyword prevents a variable from being modified after initialization? 
 a) const  
 b) final  
 c) static  
 d) private
 
-## Q26. b
+## Q26. 
 ```java
 class Test {
     final int x = 10;
@@ -391,13 +391,13 @@ b) Compilation error
 c) Runtime error  
 d) Prints 10
 
-## Q27. Which is true about constructors? b
+## Q27. Which is true about constructors? 
 a) They can be inherited.  
 b) They cannot have return type.  
 c) They must be static.  
 d) They can be final.
 
-## Q28. c
+## Q28. 
 ```java
 class Test {
     private Test() {}
@@ -413,13 +413,13 @@ b) Runtime error
 c) Creates object successfully  
 d) Null pointer exception
 
-## Q29. Which of the following concepts allows multiple classes to have different implementations of the same method? c
+## Q29. Which of the following concepts allows multiple classes to have different implementations of the same method? 
 a) Inheritance  
 b) Polymorphism  
 c) Encapsulation  
 d) Abstraction
 
-## Q30. c
+## Q30. 
 ```java
 abstract class Animal {
     abstract void sound();
