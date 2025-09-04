@@ -1,12 +1,12 @@
 # Java Objective Questions (Medium–Difficult)
 
-## Q1. Which of the following statements about Java classes and objects is true?
+## Q1. Which of the following statements about Java classes and objects is true? b
 a) Every Java program must have at least one object.  
 b) A class can exist without creating any object.  
 c) An object can exist without a class.  
 d) All classes must be abstract.
 
-## Q2. 
+## Q2. a?
 ```java
 class Student {
     String name;
@@ -31,13 +31,13 @@ b) Compilation error
 c) Null 0  
 d) Runtime error
 
-## Q3. Which keyword in Java is used to call one constructor from another constructor in the same class?
+## Q3. Which keyword in Java is used to call one constructor from another constructor in the same class? b
 a) super  
 b) this  
 c) new  
 d) final
 
-## Q4. 
+## Q4. a
 ```java
 class Demo {
     static int x = 10;
@@ -59,13 +59,13 @@ b) 10 20
 c) 50 100  
 d) 10 100
 
-## Q5. Which is true about static members?
+## Q5. Which is true about static members? a
 a) Belong to the class, not objects.  
 b) Memory allocated separately for each object.  
 c) Cannot be accessed without creating an object.  
 d) Declared using final.
 
-## Q6. 
+## Q6. a
 ```java
 class Employee {
     int id;
@@ -86,13 +86,13 @@ b) 0
 c) Compilation error  
 d) Garbage value
 
-## Q7. Encapsulation in Java is mainly achieved using:
+## Q7. Encapsulation in Java is mainly achieved using: a
 a) private variables + public methods  
 b) static variables  
 c) constructors  
 d) interfaces only
 
-## Q8. 
+## Q8. b
 ```java
 class A {
     private int data = 40;
@@ -115,13 +115,13 @@ b) Compilation error
 c) Runtime error  
 d) Hello
 
-## Q9. Which concept allows a subclass to acquire properties and methods of a superclass?
+## Q9. Which concept allows a subclass to acquire properties and methods of a superclass? c
 a) Polymorphism  
 b) Abstraction  
 c) Inheritance  
 d) Encapsulation
 
-## Q10. 
+## Q10. b
 ```java
 class A {
     void show() {
@@ -149,7 +149,7 @@ b) Class B
 c) Compilation error  
 d) Runtime error
 
-## Q11. Which of the following supports compile-time polymorphism in Java?
+## Q11. Which of the following supports compile-time polymorphism in Java? a
 a) Method overloading  
 b) Method overriding  
 c) Abstract classes  
