@@ -6,6 +6,8 @@ public class FoodDeliveryTest extends Object{
 	public static void main(String[] args) {
 		System.out.println("Welcome to Food Delivery");
 		Scanner scan = new Scanner(System.in);
+		ArrayList<ZomatoDelivery> zd = new ArrayList<>();
+		ArrayList<SwiggyDelivery> sd = new ArrayList<>();
 		String input =  "";
 		while(true) {
 			System.out.print("Enter 'Z'-Zomato 'S'-Swiggy 'exit' :");
@@ -15,18 +17,17 @@ public class FoodDeliveryTest extends Object{
 				break;
 			}
 			switch(input) {
-			case "z": zomato();
+			case "z": zomato(zd);
 			break;
-			case "s": swiggy();
+			case "s": swiggy(sd);
 			break;
 			default: System.out.println("Invalid Output");
 			}
 		}
 	}
-	static void zomato() {
+	static void zomato(ArrayList<ZomatoDelivery> zd) {
 		Scanner scan = new Scanner(System.in);
 		String input = "";
-		ArrayList<ZomatoDelivery> zd = new ArrayList<>();
 		while(true) {
 			System.out.print("'f'-Food list 'p'-Plase Order 'c'-Cancel Order 'd'-Display Cart 't'-Track Order 'exit' :");
 			input = scan.next().toLowerCase();
@@ -36,22 +37,21 @@ public class FoodDeliveryTest extends Object{
 			switch(input) {
 			case "f": getFoodList();
 			break;
-			case "p": placeOrderZomato(zd);
+			case "p": placeOrder(zd);
 			break;
-			case "c": cancelOrderZomato(zd);
+			case "c": cancelOrder(zd);
 			break;
-			case "t": trackOrder();
+			case "t": trackOrder(zd);
 			break;
-			case "d": displayCart();
+			case "d": displayCart(zd);
 			break;
 			default: System.out.println("Invalid Output");
 			}
 		}
 	}
-	static void swiggy() {
+	static void swiggy(ArrayList<SwiggyDelivery> sd) {
 		String input = "";
 		Scanner scan = new Scanner(System.in);
-		ArrayList<SwiggyDelivery> sd = new ArrayList<>();
 		while(true) {
 			System.out.print("'d'-Food list 'p'-Plase Order 'c'-Cancel Order 't'-Track Order 'exit' :");
 			input = scan.next().toLowerCase();
@@ -61,26 +61,33 @@ public class FoodDeliveryTest extends Object{
 			switch(input) {
 			case "f": getFoodList();
 			break;
-			case "p": placeOrderSwiggy(sd);
+			case "p": placeOrder(sd,0);
 			break;
-			case "c": cancelOrderSwiggy(sd);
+			case "c": cancelOrder(sd,0);
 			break;
-			case "t": trackOrder();
+			case "t": trackOrder(sd,0);
 			break;
-			case "d": displayCart();
+			case "d": displayCart(sd,0);
 			break;
 			default: System.out.println("Invalid Output");
 			}
 		}
 	}
-	static void displayCart() {
-		
+	static void displayCart(ArrayList<ZomatoDelivery> zd) {
+		for(ZomatoDelivery d: zd) {
+			System.out.println(d.orderId+" "+d.restaurantName+" "+d.status);
+		}
+	}
+	static void displayCart(ArrayList<SwiggyDelivery> sd, int dummy) {
+		for(SwiggyDelivery d: sd) {
+			System.out.println(d.orderId+" "+d.restaurantName+" "+d.status);
+		}
 	}
 	static void getFoodList() {
 		FoodItemArray fa = new FoodItemArray();
 		System.out.println(fa.getItemsList());
 	}
-	static void placeOrderZomato(ArrayList<ZomatoDelivery> cart) {
+	static void placeOrder(ArrayList<ZomatoDelivery> cart) {
 		Scanner scan = new Scanner(System.in);
 		String input = "";
 		FoodItemArray fa = new FoodItemArray();
@@ -100,12 +107,15 @@ public class FoodDeliveryTest extends Object{
 			}
 			if(b) {
 				ZomatoDelivery z = new ZomatoDelivery();
+				z.getPayment();
 				z.placeOrder(input, 1);
 				cart.add(z);
+				
 				//comment
-				for(ZomatoDelivery zitem: cart) {
+				/*for(ZomatoDelivery zitem: cart) {
 					System.out.println(zitem.orderId+" "+zitem.restaurantName+" "+z.status);
 				}
+				*/
 
 			}
 			else {
@@ -113,7 +123,7 @@ public class FoodDeliveryTest extends Object{
 			}
 		}
 	}
-	static void placeOrderSwiggy(ArrayList<SwiggyDelivery> cart) {
+	static void placeOrder(ArrayList<SwiggyDelivery> cart, int dummy) {
 		Scanner scan = new Scanner(System.in);
 		String input = "";
 		FoodItemArray fa = new FoodItemArray();
@@ -133,6 +143,7 @@ public class FoodDeliveryTest extends Object{
 			}
 			if(b) {
 				SwiggyDelivery s = new SwiggyDelivery();
+				s.getPayment();
 				s.placeOrder(input, 1);
 				cart.add(s);
 				for(SwiggyDelivery sitem: cart) {
@@ -144,7 +155,7 @@ public class FoodDeliveryTest extends Object{
 			}
 		}
 	}
-	static void cancelOrderZomato(ArrayList<ZomatoDelivery> cart) {
+	static void cancelOrder(ArrayList<ZomatoDelivery> cart) {
 		Scanner scan = new Scanner(System.in);
 		String input;
 		int id;
@@ -161,6 +172,7 @@ public class FoodDeliveryTest extends Object{
 				if(d.orderId==id) {
 					b = true;
 					d.cancelOrder(id);
+					d.sendRefund();
 					break;
 				}
 			}
@@ -174,7 +186,7 @@ public class FoodDeliveryTest extends Object{
 			}	
 		}
 	}
-	static void cancelOrderSwiggy(ArrayList<SwiggyDelivery> cart) {
+	static void cancelOrder(ArrayList<SwiggyDelivery> cart, int dummy) {
 		Scanner scan = new Scanner(System.in);
 		String input;
 		int id;
@@ -191,6 +203,7 @@ public class FoodDeliveryTest extends Object{
 				if(d.orderId==id) {
 					b = true;
 					d.cancelOrder(id);
+					d.sendRefund();
 					break;
 				}
 			}
@@ -204,9 +217,72 @@ public class FoodDeliveryTest extends Object{
 			}	
 		}
 	}
-	static void trackOrder() {
+	static void trackOrder(ArrayList<ZomatoDelivery> cart) {
+		Scanner scan = new Scanner(System.in);
+		String input;
+		int id;
+		while(true) {
+			boolean b = false;
+			boolean status = false;
+			System.out.print("Enter the id to track 'exit' :");
+			input = scan.next();
+			if(input.toLowerCase().equals("exit")) {
+				break;
+			}
+			id = Integer.parseInt(input);
+			for(ZomatoDelivery d: cart) {
+				if(d.orderId==id) {
+					b = true;
+					status = d.trackOrder(id);
+					System.out.println(d.orderId+" is "+activeNotActive(status));
+					break;
+				}
+			}
+			if(b) {
+				
+			}
+			else {
+				System.out.println("Id not present");
+			}	
+		}
 		
 	}
+	static void trackOrder(ArrayList<SwiggyDelivery> cart, int dummy) {
+		Scanner scan = new Scanner(System.in);
+		String input;
+		int id;
+		while(true) {
+			boolean b = false;
+			boolean status = false;
+			System.out.print("Enter the id to track 'exit' :");
+			input = scan.next();
+			if(input.toLowerCase().equals("exit")) {
+				break;
+			}
+			id = Integer.parseInt(input);
+			for(SwiggyDelivery d: cart) {
+				if(d.orderId==id) {
+					b = true;
+					status = d.trackOrder(id);
+					System.out.println(d.orderId+" is "+activeNotActive(status));
+					break;
+				}
+			}
+			if(b) {
+				
+			}
+			else {
+				System.out.println("Id not present");
+			}	
+		}
+	}
 	
-	
+	static String activeNotActive(boolean status) {
+		if(status) {
+			return "Active";
+		}
+		else {
+			return "Not Active";
+		}
+	}
 }
