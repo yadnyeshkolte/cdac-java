@@ -123,7 +123,7 @@ public class FoodDeliveryTest extends Object{
 			}
 		}
 	}
-	static void placeOrder(ArrayList<SwiggyDelivery> cart, int dummy) {
+	static void placeOrder(ArrayList<SwiggyDelivery> cart, int dummmy) {
 		Scanner scan = new Scanner(System.in);
 		String input = "";
 		FoodItemArray fa = new FoodItemArray();
