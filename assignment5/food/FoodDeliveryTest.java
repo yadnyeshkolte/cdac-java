@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 //placeOrderZomato placeOrderSwiggy cant able to over load why ? 
 public class FoodDeliveryTest extends Object{
-	public static void main(String[] args) {
+	public static void main() {
 		System.out.println("Welcome to Food Delivery");
 		Scanner scan = new Scanner(System.in);
 		ArrayList<ZomatoDelivery> zd = new ArrayList<>();

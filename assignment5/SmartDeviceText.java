@@ -1,7 +1,7 @@
 package assignment5;
 import java.util.Scanner;
 public class SmartDeviceText {
-	public static void main(String[] args) {
+	public static void main() {
 		Light l = new Light(1,false);
 		Fan f = new Fan(2,false);
 		Scanner scan = new Scanner(System.in);
