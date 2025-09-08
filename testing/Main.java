@@ -20,12 +20,6 @@ public class Main {
 		int[] array = new int[20];
 		int[] arr = new int[20];
 
-		for (int number : arr) {
-			// System.out.print(number);
-			number = 3;
-
-		}
-
 		for (int i = 0; i < arr.length; i++) {
 			arr[i] = 100;
 		}

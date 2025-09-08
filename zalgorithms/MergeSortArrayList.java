@@ -1,8 +1,8 @@
-package testing;
+package zalgorithms;
 
 import java.util.ArrayList;
 
-public class Test {
+public class MergeSortArrayList {
 	public static void main(String[] args) {
 		ArrayList<String> students = new ArrayList<>();
 		students.add("Yadnyesh");
@@ -13,7 +13,6 @@ public class Test {
 		students.add("Hardik");
 		students.add("Avdut");
 		students.add("Amita");
-		
 		mergeSort(students);
 		System.out.println(students);
 	}
@@ -22,15 +21,18 @@ public class Test {
 			return;
 		}
 		int mid = array.size()/2;
+		int length = array.size();
 		ArrayList<String> leftHand = new ArrayList<>();
 		ArrayList<String> rightHand = new ArrayList<>();	
 		for(int i=0;i<mid;i++) {
 			leftHand.add(i, array.get(i));
 		}
 
-		for(int i=0;i<array.size()-mid;i++) {
-			rightHand.add(i, array.get(rightHand.size()+i));
+		for(int j=0;j<length-mid;j++) {
+			rightHand.add(j, array.get(mid+j));
 		}
+		
+		
 		mergeSort(leftHand);
 		mergeSort(rightHand);
 	    
@@ -39,26 +41,28 @@ public class Test {
 	static void merge(ArrayList<String> array, ArrayList<String> leftHand, ArrayList<String> rightHand){
 		int i = 0;
 		int j = 0;
+		int k = 0;
 		
 		while(i<leftHand.size() && j<rightHand.size()) {
-			if(leftHand.get(i).compareTo(rightHand.get(i))<=0) {
-				array.add(leftHand.get(i));
+			if(leftHand.get(i).compareTo(rightHand.get(j))<=0) {
+				array.set(k, leftHand.get(i));
 				i++;
 			}
 			else {
-				array.add(rightHand.get(i));
+				array.set(k, rightHand.get(j));
 				j++;
 			}
+			k++;
 		}
-		
 		while(i<leftHand.size()) {
-			array.add(leftHand.get(i));
+			array.set(k, leftHand.get(i));
 			i++;
+			k++;
 		}
-		
 		while(j<rightHand.size()) {
-			array.add(rightHand.get(j));
+			array.set(k, rightHand.get(j));
 			j++;
-		}	
+			k++;
+		}
 	}
 }
