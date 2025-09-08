@@ -60,7 +60,8 @@ public class LibraryManagementSystem {
 			break;
 			case "r": removeBook(hash);
 			break;
-			case "c": System.out.println("==============");
+			case "c": checkBookObject(hash);
+
 			break;
 			case "call": System.out.print("You Sure want to clear all Books ? yes/no: ");
 			input = scan.next();
@@ -101,8 +102,40 @@ public class LibraryManagementSystem {
 			}
 		}
 	}
-	static void checkBookObject() {
-		
+	static void checkBookObject(HashMap<Integer, Book> hash) {
+		Scanner scan = new Scanner(System.in);
+		String number;
+		boolean bool;
+		System.out.println("==============");
+		HashMap<Short, Integer> objects = new HashMap<>();
+		short index = 1;
+		for(Entry<Integer, Book> hm:hash.entrySet()) {
+			objects.put(index, hm.getValue().bookId);
+			index++;
+		}
+		for(Entry<Short, Integer> ho:objects.entrySet()) {
+			System.out.println("Object no ("+ho.getKey()+") Price: "+hash.get(objects.get(ho.getKey())).price+" Author: "+hash.get(objects.get(ho.getKey())).author);
+		}
+		System.out.println("==============");
+		while(true) {
+			System.out.print("Enter the object no to check if it exist or 'exit' ");
+			number = scan.next();
+			if(number.equals("exit")) {
+				break;
+			}
+			if(objects.containsKey(Short.parseShort(number))) {
+				bool = hash.containsValue(hash.get(objects.get(Short.parseShort(number))));
+				if(bool) {
+					System.out.println("It is present");
+				}
+				else {
+					System.out.println("No available");
+				}
+			}
+			else {
+				System.out.println("Recheck if available");
+			}
+		}
 	}
 	static void removeBook(HashMap<Integer, Book> hash) {
 		Scanner scan = new Scanner(System.in);
