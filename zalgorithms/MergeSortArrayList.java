@@ -31,8 +31,6 @@ public class MergeSortArrayList {
 		for(int j=0;j<length-mid;j++) {
 			rightHand.add(j, array.get(mid+j));
 		}
-		
-		
 		mergeSort(leftHand);
 		mergeSort(rightHand);
 	    
