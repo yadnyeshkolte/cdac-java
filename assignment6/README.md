@@ -1,6 +1,20 @@
 ## Assignment 6 Collections
 
-**HashMap (with Object)**
+
+
+### Problem Statement:
+**ArrayList (with Product Object, CRUD + Business Logic)**  **HashMap (with Object)**
+
+Design a Product Inventory Management System using an ArrayList<Product> where each Product object contains attributes like id, name, price, and quantity.
+Your task is to implement the following:
+🔸 CRUD Operations
+1.	Create – Add new Product objects into the ArrayList.
+2.	Read – Display all products in the inventory.
+3.	Update – Update a product’s price or quantity by searching with the id.
+4.	Delete – Remove a product from the list by id.
+🔸 Business Logic Method
+•	Write a method to calculate the total inventory value, i.e., sum of price × quantity for all products.
+
 
 **Problem Statement:**  
 Design a **Library Management System** using a HashMap\<Integer, Book\> where the key is the **Book ID** and the value is a Book object (with properties like title, author, price).
