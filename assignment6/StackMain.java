@@ -2,7 +2,7 @@ package assignment6;
 import java.util.Stack;
 import java.util.Scanner;
 public class StackMain {
-	public static void main(String[] args) {
+	public static void main() {
 		Scanner scan = new Scanner(System.in);
 		Stack<Integer> temperature = new Stack<>();
 		System.out.println("Enter 5 Temperature values ");

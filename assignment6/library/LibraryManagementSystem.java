@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class LibraryManagementSystem {
 
-	public static void main(String[] args) {
+	public static void main() {
 		HashMap<Integer, Book> hash = LibraryBooks.getBooks();
 		Scanner scan = new Scanner(System.in);
 		String input = "";

@@ -5,12 +5,12 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class ProductInventoryManagementSystem {
-	public static void main(String[] args) {
+	public static void main() {
 		Scanner scan = new Scanner(System.in);
 		String input;
 		ArrayList<Product> products = ProductData.getProductItems();
 		while(true) {
-			System.out.print("Want to try CRUD & t-total operations ");
+			System.out.print("Want to try CRUD 'c','r','u','d' & t-total operations ");
 			input = scan.next().toLowerCase();
 			if(input.equals("exit")) {
 				System.out.println("Bye");

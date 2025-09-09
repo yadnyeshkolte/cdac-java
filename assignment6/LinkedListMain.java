@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.Scanner;
 
 public class LinkedListMain {
-	public static void main(String[] args) {
+	public static void main() {
 		Scanner scan = new Scanner(System.in);
 		int input;
 		LinkedList<Integer> tasks = new LinkedList<>();

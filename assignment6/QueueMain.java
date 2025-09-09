@@ -4,7 +4,7 @@ import java.util.PriorityQueue;
 import java.util.Scanner;
 
 public class QueueMain {
-	public static void main(String[] args) {
+	public static void main() {
 		Scanner scan = new Scanner(System.in);
 		PriorityQueue<Integer> tokens = new PriorityQueue<>();
 		System.out.print("Enter Tokens ");
