@@ -12,14 +12,30 @@ public class YadnyeshRetriveData {
 		
 		try {
 			while((ui=(YadnyeshObject) oi.readObject())!=null) {
+				System.out.println("========");
 				ui.displayObject();
+				System.out.println("--------");
+				isHeEligible(ui);
+				System.out.println("========");
 			}
 		}catch(EOFException e) {
 			//TO Ignore runtime exception error
-			System.out.println("Code Completed");
+			//System.out.println("===================");
 		}
 		
-		System.out.println("Program Completed");
+
 
 	}
+	static void isHeEligible(YadnyeshObject y) {
+		if(y.years<=1) {
+			System.out.println("He is not Eligible");
+		}
+		else if(y.years>1 && y.years<=3) {
+			System.out.println("He may be Eligible");
+		}
+		else {
+			System.out.println("He is Eligible");
+		}
+	}
+	
 }
