@@ -21,6 +21,7 @@ public class PMSMain {
 			if(input.equals("exit")) {
 				break;
 			}
+			//New to the worrld
 			switch(input) {
 			case "a": System.out.println("Lets start to add product: ");
 			JDBCProductConnections.addProduct();
