@@ -7,6 +7,10 @@ import java.util.Scanner;
 
 public class Assignment1Solution {
     public static void main(String[] args){
+        long number = 18027753;
+        long number2 = 56859888;
+        long number3 = 34590325;
+            
         System.out.println("Welcome: Want to try out solution ?");
         System.out.println("Want to know what is inside each 1 to 10 case");
         switchEntry();
