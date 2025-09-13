@@ -18,9 +18,6 @@ public class LibraryMethods {
 			while((bk = (Book) oi.readObject())!=null) {
 				ab.add(bk);
 			}
-
-
-
 		}
 		catch(EOFException e) {
 			
