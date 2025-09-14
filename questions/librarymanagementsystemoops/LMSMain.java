@@ -34,9 +34,10 @@ public class LMSMain {
 				System.out.println("Doesn't exist or It must be Borrowed");
 			}
 			if(boolb = true) {
+				LibraryMethods.borrowBook(inputInt);
 				break;
 			}
-			LibraryMethods.borrowBook(inputInt);
+
 			break;
 			case "r": boolean boolr = false;
 			while(true) {
@@ -54,11 +55,12 @@ public class LMSMain {
 				System.out.println("It is already present in our Library");
 			}
 			if(boolr = true) {
+				System.out.print("Enter the late dues: ");
+				inputInt1 = scan.nextInt();
+				LibraryMethods.returnBook(inputInt, inputInt1);
 				break;
 			}
-			System.out.print("Enter the late dues: ");
-			inputInt1 = scan.nextInt();
-			LibraryMethods.returnBook(inputInt, inputInt1);
+
 			break;
 			default: System.out.println("Invalid Input");
 			}
