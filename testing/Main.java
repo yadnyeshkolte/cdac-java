@@ -11,12 +11,6 @@ public class Main {
 		
 		int number = rand.nextInt(100,200);
 		
-		
-		
-		
-		
-		
-		
 		int[] array = new int[20];
 		int[] arr = new int[20];
 
