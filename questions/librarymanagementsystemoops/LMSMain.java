@@ -11,7 +11,7 @@ public class LMSMain {
 		int inputInt1 = 0;
 		Scanner scan = new Scanner(System.in);
 		while(true) {
-			System.out.print("Enter the case to continue: ");
+			System.out.print("Enter the case to continue a,v,b,r: ");
 			input = scan.next();
 			switch(input.toLowerCase()) {
 			case "a": LibraryMethods.addBook();
