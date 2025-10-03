@@ -72,28 +72,7 @@ public class LibraryMethods{
 		b.isAvailable = false;
 		System.out.println("-----------> Its Borrowed");
 	}
-	static void returnBook(int bookId, int daysLate) {
-		Book b;
-		b = getObject(bookId);
-		b.isAvailable = true;
-		double ruppes = 0.0;
-		if(daysLate>0) {
-			if(objectName(bookId).equals("AcademicBook")) {
-				AcademicBook a = (AcademicBook) b;
-				ruppes = a.calculateFine(daysLate);
-			}
-			else if(objectName(bookId).equals("FictionBook")) {
-				FictionBook a = (FictionBook) b;
-				ruppes = a.calculateFine(daysLate);
-			}
-			else if(objectName(bookId).equals("NonFictionBook")) {
-				NonFictionBook a = (NonFictionBook) b;
-				ruppes = a.calculateFine(daysLate);
-			}
-			System.out.println("Pay the late dues of: "+ruppes+" Ruppes");
-		}
-		System.out.println("-----------> Its Returned");
-	}
+	
 	static String objectName(int bookId) {
 		Book b;
 		for(int i=0;i<ab.size();i++) {
@@ -140,5 +119,27 @@ public class LibraryMethods{
 			}
 		}
 		return bool;
+
+	static void returnBook(int bookId, int daysLate) {
+		Book b;
+		b = getObject(bookId);
+		b.isAvailable = true;
+		double ruppes = 0.0;
+		if(daysLate>0) {
+			if(objectName(bookId).equals("AcademicBook")) {
+				AcademicBook a = (AcademicBook) b;
+				ruppes = a.calculateFine(daysLate);
+			}
+			else if(objectName(bookId).equals("FictionBook")) {
+				FictionBook a = (FictionBook) b;
+				ruppes = a.calculateFine(daysLate);
+			}
+			else if(objectName(bookId).equals("NonFictionBook")) {
+				NonFictionBook a = (NonFictionBook) b;
+				ruppes = a.calculateFine(daysLate);
+			}
+			System.out.println("Pay the late dues of: "+ruppes+" Ruppes");
+		}
+		System.out.println("-----------> Its Returned");
 	}
 }

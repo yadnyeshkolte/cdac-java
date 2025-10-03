@@ -17,7 +17,6 @@ public class JDBCConnection {
 		
 		return con;
 	}
-	
 	public static boolean checkId(int id) throws ClassNotFoundException, SQLException {
 		String query = "select * from library";
 		PreparedStatement pmt = getConnection().prepareStatement(query);
