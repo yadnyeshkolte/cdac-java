@@ -1463,6 +1463,181 @@ public class FileReadExample {
 }
 ```
 
+### Working with Text Files (Character Streams)
+
+#### Writing to Text File
+
+```java
+import java.io.*;
+
+public class TextFileWriter {
+    public static void main(String[] args) {
+        // Method 1: FileWriter (basic)
+        try (FileWriter writer = new FileWriter("output.txt")) {
+            writer.write("Hello World\n");
+            writer.write("This is line 2\n");
+            System.out.println("File written successfully");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        
+        // Method 2: BufferedWriter (efficient for large files)
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter("output.txt"))) {
+            bw.write("First line");
+            bw.newLine(); // Platform-independent line separator
+            bw.write("Second line");
+            bw.newLine();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        
+        // Append to existing file
+        try (FileWriter writer = new FileWriter("output.txt", true)) {
+            writer.write("Appended line\n");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+#### Reading from Text File
+
+```java
+import java.io.*;
+
+public class TextFileReader {
+    public static void main(String[] args) {
+        // Method 1: FileReader with BufferedReader (line by line)
+        try (BufferedReader br = new BufferedReader(new FileReader("input.txt"))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                System.out.println(line);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        
+        // Method 2: Reading character by character
+        try (FileReader fr = new FileReader("input.txt")) {
+            int character;
+            while ((character = fr.read()) != -1) {
+                System.out.print((char) character);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+---
+
+### Working with Binary Files (Byte Streams)
+
+#### Writing Binary Data
+
+```java
+import java.io.*;
+
+public class BinaryFileWriter {
+    public static void main(String[] args) {
+        // Writing bytes
+        try (FileOutputStream fos = new FileOutputStream("data.bin")) {
+            byte[] data = {10, 20, 30, 40, 50};
+            fos.write(data);
+            System.out.println("Binary data written");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+#### Reading Binary Data
+
+```java
+import java.io.*;
+
+public class BinaryFileReader {
+    public static void main(String[] args) {
+        try (FileInputStream fis = new FileInputStream("data.bin")) {
+            int byteData;
+            while ((byteData = fis.read()) != -1) {
+                System.out.println(byteData);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+---
+
+### Working with Primitive Data Types (DataInputStream/DataOutputStream)
+
+#### Writing Primitive Types
+
+```java
+import java.io.*;
+
+public class PrimitiveDataWriter {
+    public static void main(String[] args) {
+        try (DataOutputStream dos = new DataOutputStream(
+                new FileOutputStream("primitives.dat"))) {
+            
+            // Writing different primitive types
+            dos.writeInt(100);
+            dos.writeDouble(99.99);
+            dos.writeBoolean(true);
+            dos.writeChar('A');
+            dos.writeFloat(3.14f);
+            dos.writeLong(123456789L);
+            dos.writeUTF("Hello World"); // Writing String
+            
+            System.out.println("Primitive data written");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+#### Reading Primitive Types
+
+```java
+import java.io.*;
+
+public class PrimitiveDataReader {
+    public static void main(String[] args) {
+        try (DataInputStream dis = new DataInputStream(
+                new FileInputStream("primitives.dat"))) {
+            
+            // IMPORTANT: Read in the same order as written
+            int intValue = dis.readInt();
+            double doubleValue = dis.readDouble();
+            boolean boolValue = dis.readBoolean();
+            char charValue = dis.readChar();
+            float floatValue = dis.readFloat();
+            long longValue = dis.readLong();
+            String stringValue = dis.readUTF();
+            
+            System.out.println("Int: " + intValue);
+            System.out.println("Double: " + doubleValue);
+            System.out.println("Boolean: " + boolValue);
+            System.out.println("Char: " + charValue);
+            System.out.println("Float: " + floatValue);
+            System.out.println("Long: " + longValue);
+            System.out.println("String: " + stringValue);
+            
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+
 ---
 
 ## JDBC (Java Database Connectivity)
