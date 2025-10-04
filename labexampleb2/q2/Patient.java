@@ -1,4 +1,4 @@
-package labexamb2.q2;
+package labexampleb2.q2;
 
 public class Patient {
 	int patientId;

@@ -1,4 +1,4 @@
-package labexamb2.q2;
+package labexampleb2.q2;
 import java.util.ArrayList;
 import java.util.Scanner;
 public class PatientMain {
