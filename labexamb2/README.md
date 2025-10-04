@@ -1,12 +1,8 @@
-# Core Java Lab Exam - Question Paper B2
-
-## Overview
-This question paper contains 4 questions covering fundamental Java concepts including OOP, Collections, File Handling, and Database Operations.
+# Core Java Lab Questions - B2
 
 ---
 
 ## Q1 – Object-Oriented Programming (OOPs)
-**CODE: CDACB**
 
 ### Objective
 Design a Java program to manage hospital patients using OOP concepts.
@@ -42,7 +38,6 @@ Design a Java program to manage hospital patients using OOP concepts.
 ---
 
 ## Q2 – ArrayList Operations
-**CODE: CDACH**
 
 ### Objective
 Write a program to manage patients using `ArrayList<Patient>`.
@@ -65,7 +60,6 @@ Write a program to manage patients using `ArrayList<Patient>`.
 ---
 
 ## Q3 – File Handling
-**CODE: CDACD**
 
 ### Objective
 Write a program to manage patient details stored in a file (`patients.txt`).
@@ -91,7 +85,6 @@ Each record contains: `patientId, name, age, disease`
 ---
 
 ## Q4 – Database Operations (JDBC CRUD)
-**CODE: CDACP**
 
 ### Objective
 Write a JDBC program to perform CRUD operations on the Patient table.
