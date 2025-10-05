@@ -8,7 +8,7 @@
 4. Extract the downloaded file
 5. Locate the JAR file (e.g., `mysql-connector-j-8.x.x.jar`)
 
-## Add JAR to Project
+## Add JAR to Project (eclipse)
 
 1. Right-click on your project in Project Explorer
 2. Select **Build Path** → **Configure Build Path**
