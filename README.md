@@ -8,18 +8,16 @@ A comprehensive collection of Java concepts, Object-Oriented Programming (OOP), 
 
 ### Data Types & Variables
 
-#### Primitive Data Types
-
-| Data Type | Size | Range | Example |
-|-----------|------|-------|---------|
-| `byte` | 8 bits | -128 to 127 | `byte b = 100;` |
-| `short` | 16 bits | -32,768 to 32,767 | `short s = 32000;` |
-| `int` | 32 bits | -2³¹ to 2³¹-1 | `int i = 100000;` |
-| `long` | 64 bits | -2⁶³ to 2⁶³-1 | `long l = 9876543210L;` |
-| `float` | 32 bits | ~6-7 decimal digits | `float f = 5.5f;` |
-| `double` | 64 bits | ~15 decimal digits | `double d = 5.5;` |
-| `char` | 16 bits | Unicode characters | `char c = 'A';` |
-| `boolean` | 1 bit | true/false | `boolean flag = true;` |
+| Data Type | Size | Bytes | Range | Example |
+| --- | --- | --- | --- | --- |
+| `byte` | 8 bits | 1 | -128 to 127 | `byte b = 100;` |
+| `short` | 16 bits | 2 | -32,768 to 32,767 | `short s = 32000;` |
+| `int` | 32 bits | 4 | -2³¹ to 2³¹-1 | `int i = 100000;` |
+| `long` | 64 bits | 8 | -2⁶³ to 2⁶³-1 | `long l = 9876543210L;` |
+| `float` | 32 bits | 4 | ~6-7 decimal digits | `float f = 5.5f;` |
+| `double` | 64 bits | 8 | ~15 decimal digits | `double d = 5.5;` |
+| `char` | 16 bits | 2 | Unicode characters | `char c = 'A';` |
+| `boolean` | 1 bit | 1* | true/false | `boolean flag = true;` |
 
 #### Important Points:
 
