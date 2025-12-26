@@ -1114,6 +1114,45 @@ queue.forEach(item -> System.out.println(item));
 
 ---
 
+In Java, collections that save data in an *ordered way* include **List implementations (ArrayList, LinkedList, Vector)** for maintaining insertion order, and **LinkedHashSet / LinkedHashMap** for preserving insertion order in sets and maps. If you want elements sorted automatically, you’d use **TreeSet** or **TreeMap**, which keep data in *natural order* (like alphabetical or numerical).
+
+### 1. **Insertion Order (the order you add elements)**
+- **ArrayList / LinkedList / Vector** → Always keep elements in the order you inserted them.  
+- **LinkedHashSet** → A Set that removes duplicates but still remembers the order you added items.  
+- **LinkedHashMap** → A Map that remembers the order of key-value pairs you inserted.
+
+### 2. **Sorted Order (automatic ordering)**
+- **TreeSet** → Stores unique elements in sorted order (e.g., numbers ascending, strings alphabetically).  
+- **TreeMap** → Stores key-value pairs sorted by keys.  
+
+### 3. **Random / No Order**
+- **HashSet** → No guaranteed order.  
+- **HashMap** → No guaranteed order of keys.  
+
+---
+
+## 📊 Quick Comparison
+
+| Collection Type   | Maintains Insertion Order? | Maintains Sorted Order? | Allows Duplicates? |
+|-------------------|----------------------------|--------------------------|--------------------|
+| ArrayList         | ✅ Yes                     | ❌ No                   | ✅ Yes             |
+| LinkedList        | ✅ Yes                     | ❌ No                   | ✅ Yes             |
+| Vector            | ✅ Yes                     | ❌ No                   | ✅ Yes             |
+| LinkedHashSet     | ✅ Yes                     | ❌ No                   | ❌ No              |
+| LinkedHashMap     | ✅ Yes                     | ❌ No                   | ❌ Keys only       |
+| TreeSet           | ❌ No (insertion ignored)  | ✅ Yes (sorted)         | ❌ No              |
+| TreeMap           | ❌ No (insertion ignored)  | ✅ Yes (sorted by key)  | ❌ Keys only       |
+| HashSet / HashMap | ❌ No                     | ❌ No                   | ❌ No              |
+
+---
+
+## 🎯 Key Takeaway
+- Use **List** if you want duplicates and insertion order.  
+- Use **LinkedHashSet / LinkedHashMap** if you want uniqueness but still preserve insertion order.  
+- Use **TreeSet / TreeMap** if you want automatic sorting.  
+
+---
+
 ## Useful Java Methods Tables
 
 ### String Methods
